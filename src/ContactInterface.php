@@ -1,4 +1,12 @@
 <?php
+/**
+ * This file is part of the mimmi20/contact package.
+ *
+ * Copyright (c) 2022, Thomas Mueller <mimmi20@live.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 declare(strict_types = 1);
 
@@ -57,8 +65,8 @@ interface ContactInterface
     public function setProfession(?string $value): void;
 
     /**
-     * @return string[]|null[]
-     * @phpstan-return array{contactId: string|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
+     * @return int[]|null[]|string[]
+     * @phpstan-return array{contactId: int|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
      */
     public function toArray(): array;
 }

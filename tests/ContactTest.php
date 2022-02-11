@@ -1,4 +1,12 @@
 <?php
+/**
+ * This file is part of the mimmi20/contact package.
+ *
+ * Copyright (c) 2022, Thomas Mueller <mimmi20@live.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 declare(strict_types = 1);
 
@@ -8,7 +16,7 @@ use DateTimeImmutable;
 use Exception;
 use PHPUnit\Framework\TestCase;
 
-class ContactTest extends TestCase
+final class ContactTest extends TestCase
 {
     private Contact $object;
 
@@ -172,18 +180,18 @@ class ContactTest extends TestCase
         $this->object->setProfession($profession);
 
         $expected = [
-            'contactId'   => $id,
-            'salutation'  => $salutation,
-            'firstname'   => $firstname,
-            'familyname'  => $familyname,
-            'street'      => $street,
+            'contactId' => $id,
+            'salutation' => $salutation,
+            'firstname' => $firstname,
+            'familyname' => $familyname,
+            'street' => $street,
             'housenumber' => $housenumber,
-            'postalcode'  => $postalcode,
-            'city'        => $city,
-            'birthdate'   => $birthdate->format('Y-m-d'),
+            'postalcode' => $postalcode,
+            'city' => $city,
+            'birthdate' => $birthdate->format('Y-m-d'),
             'phonenumber' => $phonenumber,
-            'email'       => $email,
-            'profession'  => $profession,
+            'email' => $email,
+            'profession' => $profession,
         ];
 
         self::assertSame($expected, $this->object->toArray());

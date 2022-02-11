@@ -1,4 +1,12 @@
 <?php
+/**
+ * This file is part of the mimmi20/contact package.
+ *
+ * Copyright (c) 2022, Thomas Mueller <mimmi20@live.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 declare(strict_types = 1);
 
@@ -6,7 +14,7 @@ namespace Mimmi20\Contact;
 
 use DateTimeInterface;
 
-class Contact implements ContactInterface
+final class Contact implements ContactInterface
 {
     private ?int $contactId = null;
 
@@ -153,8 +161,8 @@ class Contact implements ContactInterface
     }
 
     /**
-     * @return string[]|null[]
-     * @phpstan-return array{contactId: string|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
+     * @return int[]|null[]|string[]
+     * @phpstan-return array{contactId: int|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
      */
     public function toArray(): array
     {
@@ -165,18 +173,18 @@ class Contact implements ContactInterface
         }
 
         return [
-            'contactId'   => $this->getContactId(),
-            'salutation'  => $this->getSalutation(),
-            'firstname'   => $this->getFirstname(),
-            'familyname'  => $this->getFamilyname(),
-            'street'      => $this->getStreet(),
+            'contactId' => $this->getContactId(),
+            'salutation' => $this->getSalutation(),
+            'firstname' => $this->getFirstname(),
+            'familyname' => $this->getFamilyname(),
+            'street' => $this->getStreet(),
             'housenumber' => $this->getHousenumber(),
-            'postalcode'  => $this->getPostalcode(),
-            'city'        => $this->getCity(),
-            'birthdate'   => $birthdate,
+            'postalcode' => $this->getPostalcode(),
+            'city' => $this->getCity(),
+            'birthdate' => $birthdate,
             'phonenumber' => $this->getPhonenumber(),
-            'email'       => $this->getEmail(),
-            'profession'  => $this->getProfession(),
+            'email' => $this->getEmail(),
+            'profession' => $this->getProfession(),
         ];
     }
 }
