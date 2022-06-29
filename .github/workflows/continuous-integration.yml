@@ -29,7 +29,7 @@ jobs:
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
+          - "8.1"
 
     steps:
       - name: "Checkout"
@@ -68,8 +68,6 @@ jobs:
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
-          - "8.0"
           - "8.1"
 
     steps:
@@ -88,13 +86,15 @@ jobs:
           coverage: "none"
           tools: "${{ env.TOOLS }}"
 
-      - name: "Lint PHP"
-        if: "${{ matrix.php-version == '7.4' }}"
-        uses: "overtrue/phplint@7.4"
+      #- name: "Lint PHP"
+      #  uses: "overtrue/phplint@8.1"
 
-      - name: "Lint PHP"
-        if: "${{ matrix.php-version != '7.4' }}"
-        uses: "overtrue/phplint@8.0"
+      - name: "Linter"
+        # You can override Mega-Linter flavor used to have faster performances
+        # More info at https://nvuillam.github.io/mega-linter/flavors/
+        uses: "nvuillam/mega-linter/flavors/php@v5"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   install:
     name: "Install dependencies"
@@ -110,13 +110,10 @@ jobs:
 
       matrix:
         operating-system:
-          - "ubuntu-18.04"
           - "ubuntu-20.04"
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
-          - "8.0"
           - "8.1"
 
         dependencies:
@@ -186,7 +183,7 @@ jobs:
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
+          - "8.1"
 
         dependencies:
           - "highest"
@@ -234,7 +231,7 @@ jobs:
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
+          - "8.1"
 
         dependencies:
           - "highest"
@@ -280,7 +277,7 @@ jobs:
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
+          - "8.1"
 
         dependencies:
           - "highest"
@@ -324,13 +321,10 @@ jobs:
 
       matrix:
         operating-system:
-          - "ubuntu-18.04"
           - "ubuntu-20.04"
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
-          - "8.0"
           - "8.1"
 
         dependencies:
@@ -376,13 +370,10 @@ jobs:
 
       matrix:
         operating-system:
-          - "ubuntu-18.04"
           - "ubuntu-20.04"
           - "ubuntu-22.04"
 
         php-version:
-          - "7.4"
-          - "8.0"
           - "8.1"
 
         dependencies:
@@ -406,7 +397,7 @@ jobs:
           extensions: "${{ env.PHP_EXTENSIONS }}"
           ini-values: "${{ env.PHP_INI_VALUES }}"
           coverage: "${{ matrix.coverage-drivers }}"
-          tools: "${{ env.TOOLS }}, infection:0.26.6"
+          tools: "${{ env.TOOLS }}, infection"
 
       - name: "Update dependencies with composer"
         uses: "ramsey/composer-install@v1"
