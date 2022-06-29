@@ -19,7 +19,7 @@ This library requires PHP 7.4+.
 Run
 
 ```shell
-$ composer require mimmi20/contact
+composer require mimmi20/contact
 ```
 
 ## License
