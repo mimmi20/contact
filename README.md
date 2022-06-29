@@ -18,8 +18,8 @@ This library requires PHP 7.4+.
 
 Run
 
-```
-$ composer require mimmi20/contact
+```shell
+composer require mimmi20/contact
 ```
 
 ## License
