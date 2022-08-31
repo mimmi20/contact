@@ -16,53 +16,53 @@ use DateTimeInterface;
 
 interface ContactInterface
 {
-    public function getContactId(): ?int;
+    public function getContactId(): int | null;
 
-    public function setContactId(?int $value): void;
+    public function setContactId(int | null $value): void;
 
-    public function getSalutation(): ?string;
+    public function getSalutation(): string | null;
 
-    public function setSalutation(?string $value): void;
+    public function setSalutation(string | null $value): void;
 
-    public function getFirstname(): ?string;
+    public function getFirstname(): string | null;
 
-    public function setFirstname(?string $value): void;
+    public function setFirstname(string | null $value): void;
 
-    public function getFamilyname(): ?string;
+    public function getFamilyname(): string | null;
 
-    public function setFamilyname(?string $value): void;
+    public function setFamilyname(string | null $value): void;
 
-    public function getStreet(): ?string;
+    public function getStreet(): string | null;
 
-    public function setStreet(?string $value): void;
+    public function setStreet(string | null $value): void;
 
-    public function getHousenumber(): ?string;
+    public function getHousenumber(): string | null;
 
-    public function setHousenumber(?string $value): void;
+    public function setHousenumber(string | null $value): void;
 
-    public function getPostalcode(): ?string;
+    public function getPostalcode(): string | null;
 
-    public function setPostalcode(?string $value): void;
+    public function setPostalcode(string | null $value): void;
 
-    public function getCity(): ?string;
+    public function getCity(): string | null;
 
-    public function setCity(?string $value): void;
+    public function setCity(string | null $value): void;
 
-    public function getBirthdate(): ?DateTimeInterface;
+    public function getBirthdate(): DateTimeInterface | null;
 
-    public function setBirthdate(?DateTimeInterface $value): void;
+    public function setBirthdate(DateTimeInterface | null $value): void;
 
-    public function getPhonenumber(): ?string;
+    public function getPhonenumber(): string | null;
 
-    public function setPhonenumber(?string $value): void;
+    public function setPhonenumber(string | null $value): void;
 
-    public function getEmail(): ?string;
+    public function getEmail(): string | null;
 
-    public function setEmail(?string $value): void;
+    public function setEmail(string | null $value): void;
 
-    public function getProfession(): ?string;
+    public function getProfession(): string | null;
 
-    public function setProfession(?string $value): void;
+    public function setProfession(string | null $value): void;
 
     /**
      * @return int[]|null[]|string[]

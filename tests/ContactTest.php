@@ -105,9 +105,7 @@ final class ContactTest extends TestCase
         self::assertSame($city, $this->object->getCity());
     }
 
-    /**
-     * @throws Exception
-     */
+    /** @throws Exception */
     public function testSetGetBirthdate(): void
     {
         self::assertNull($this->object->getBirthdate());
@@ -148,9 +146,7 @@ final class ContactTest extends TestCase
         self::assertSame($profession, $this->object->getProfession());
     }
 
-    /**
-     * @throws Exception
-     */
+    /** @throws Exception */
     public function testToArray(): void
     {
         $id          = 1;
