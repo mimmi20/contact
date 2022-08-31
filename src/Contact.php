@@ -16,146 +16,146 @@ use DateTimeInterface;
 
 final class Contact implements ContactInterface
 {
-    private ?int $contactId = null;
+    private int | null $contactId = null;
 
-    private ?string $salutation = null;
+    private string | null $salutation = null;
 
-    private ?string $firstname = null;
+    private string | null $firstname = null;
 
-    private ?string $familyname = null;
+    private string | null $familyname = null;
 
-    private ?string $street = null;
+    private string | null $street = null;
 
-    private ?string $housenumber = null;
+    private string | null $housenumber = null;
 
-    private ?string $postalcode = null;
+    private string | null $postalcode = null;
 
-    private ?string $city = null;
+    private string | null $city = null;
 
-    private ?DateTimeInterface $birthdate = null;
+    private DateTimeInterface | null $birthdate = null;
 
-    private ?string $email = null;
+    private string | null $email = null;
 
-    private ?string $phonenumber = null;
+    private string | null $phonenumber = null;
 
-    private ?string $profession = null;
+    private string | null $profession = null;
 
-    public function getContactId(): ?int
+    public function getContactId(): int | null
     {
         return $this->contactId;
     }
 
-    public function setContactId(?int $value): void
+    public function setContactId(int | null $value): void
     {
         $this->contactId = $value;
     }
 
-    public function getSalutation(): ?string
+    public function getSalutation(): string | null
     {
         return $this->salutation;
     }
 
-    public function setSalutation(?string $value): void
+    public function setSalutation(string | null $value): void
     {
         $this->salutation = $value;
     }
 
-    public function getFirstname(): ?string
+    public function getFirstname(): string | null
     {
         return $this->firstname;
     }
 
-    public function setFirstname(?string $value): void
+    public function setFirstname(string | null $value): void
     {
         $this->firstname = $value;
     }
 
-    public function getFamilyname(): ?string
+    public function getFamilyname(): string | null
     {
         return $this->familyname;
     }
 
-    public function setFamilyname(?string $value): void
+    public function setFamilyname(string | null $value): void
     {
         $this->familyname = $value;
     }
 
-    public function getStreet(): ?string
+    public function getStreet(): string | null
     {
         return $this->street;
     }
 
-    public function setStreet(?string $value): void
+    public function setStreet(string | null $value): void
     {
         $this->street = $value;
     }
 
-    public function getHousenumber(): ?string
+    public function getHousenumber(): string | null
     {
         return $this->housenumber;
     }
 
-    public function setHousenumber(?string $value): void
+    public function setHousenumber(string | null $value): void
     {
         $this->housenumber = $value;
     }
 
-    public function getPostalcode(): ?string
+    public function getPostalcode(): string | null
     {
         return $this->postalcode;
     }
 
-    public function setPostalcode(?string $value): void
+    public function setPostalcode(string | null $value): void
     {
         $this->postalcode = $value;
     }
 
-    public function getCity(): ?string
+    public function getCity(): string | null
     {
         return $this->city;
     }
 
-    public function setCity(?string $value): void
+    public function setCity(string | null $value): void
     {
         $this->city = $value;
     }
 
-    public function getBirthdate(): ?DateTimeInterface
+    public function getBirthdate(): DateTimeInterface | null
     {
         return $this->birthdate;
     }
 
-    public function setBirthdate(?DateTimeInterface $value): void
+    public function setBirthdate(DateTimeInterface | null $value): void
     {
         $this->birthdate = $value;
     }
 
-    public function getPhonenumber(): ?string
+    public function getPhonenumber(): string | null
     {
         return $this->phonenumber;
     }
 
-    public function setPhonenumber(?string $value): void
+    public function setPhonenumber(string | null $value): void
     {
         $this->phonenumber = $value;
     }
 
-    public function getEmail(): ?string
+    public function getEmail(): string | null
     {
         return $this->email;
     }
 
-    public function setEmail(?string $value): void
+    public function setEmail(string | null $value): void
     {
         $this->email = $value;
     }
 
-    public function getProfession(): ?string
+    public function getProfession(): string | null
     {
         return $this->profession;
     }
 
-    public function setProfession(?string $value): void
+    public function setProfession(string | null $value): void
     {
         $this->profession = $value;
     }
