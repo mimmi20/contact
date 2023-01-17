@@ -29,6 +29,7 @@
     "ext-tokenizer": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
+    "infection/infection": "^0.26.16",
     "mimmi20/coding-standard": "^3.0.26",
     "nikic/php-parser": "^v4.15.3",
     "phpstan/extension-installer": "^1.2.0",
@@ -51,10 +52,12 @@
   },
   "config": {
     "preferred-install": "dist",
+    "lock": false,
     "sort-packages": true,
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true,
-      "phpstan/extension-installer": true
+      "phpstan/extension-installer": true,
+      "infection/extension-installer": true
     }
   }
 }
