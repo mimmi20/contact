@@ -49,5 +49,5 @@ parameters:
       missingCheckedExceptionInThrows: true
       tooWideThrowType: true
 
-  ignoreErrors:
-    - '~Call to static method PHPUnit\\Framework\\Assert::assertSame\(\) with~'
+#  ignoreErrors:
+#    - '~Call to static method PHPUnit\\Framework\\Assert::assertSame\(\) with~'
