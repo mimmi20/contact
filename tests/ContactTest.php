@@ -2,7 +2,7 @@
 /**
  * This file is part of the mimmi20/contact package.
  *
- * Copyright (c) 2022, Thomas Mueller <mimmi20@live.de>
+ * Copyright (c) 2022-2023, Thomas Mueller <mimmi20@live.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -14,17 +14,20 @@ namespace Mimmi20\Contact;
 
 use DateTimeImmutable;
 use Exception;
+use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 
 final class ContactTest extends TestCase
 {
     private Contact $object;
 
+    /** @throws void */
     protected function setUp(): void
     {
         $this->object = new Contact();
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetContactId(): void
     {
         self::assertNull($this->object->getContactId());
@@ -35,6 +38,7 @@ final class ContactTest extends TestCase
         self::assertSame($id, $this->object->getContactId());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetSalutation(): void
     {
         self::assertNull($this->object->getSalutation());
@@ -45,6 +49,7 @@ final class ContactTest extends TestCase
         self::assertSame($salutation, $this->object->getSalutation());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetFirstname(): void
     {
         self::assertNull($this->object->getFirstname());
@@ -55,6 +60,7 @@ final class ContactTest extends TestCase
         self::assertSame($firstname, $this->object->getFirstname());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetFamilyname(): void
     {
         self::assertNull($this->object->getFamilyname());
@@ -65,6 +71,7 @@ final class ContactTest extends TestCase
         self::assertSame($familyname, $this->object->getFamilyname());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetStreet(): void
     {
         self::assertNull($this->object->getStreet());
@@ -75,6 +82,7 @@ final class ContactTest extends TestCase
         self::assertSame($street, $this->object->getStreet());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetHousenumber(): void
     {
         self::assertNull($this->object->getHousenumber());
@@ -85,6 +93,7 @@ final class ContactTest extends TestCase
         self::assertSame($housenumber, $this->object->getHousenumber());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetPostalcode(): void
     {
         self::assertNull($this->object->getPostalcode());
@@ -95,6 +104,7 @@ final class ContactTest extends TestCase
         self::assertSame($postalcode, $this->object->getPostalcode());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetCity(): void
     {
         self::assertNull($this->object->getCity());
@@ -105,7 +115,10 @@ final class ContactTest extends TestCase
         self::assertSame($city, $this->object->getCity());
     }
 
-    /** @throws Exception */
+    /**
+     * @throws ExpectationFailedException
+     * @throws Exception
+     */
     public function testSetGetBirthdate(): void
     {
         self::assertNull($this->object->getBirthdate());
@@ -116,6 +129,7 @@ final class ContactTest extends TestCase
         self::assertSame($birthdate, $this->object->getBirthdate());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetEmail(): void
     {
         self::assertNull($this->object->getEmail());
@@ -126,6 +140,7 @@ final class ContactTest extends TestCase
         self::assertSame($email, $this->object->getEmail());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetPhonenumber(): void
     {
         self::assertNull($this->object->getPhonenumber());
@@ -136,6 +151,7 @@ final class ContactTest extends TestCase
         self::assertSame($phonenumber, $this->object->getPhonenumber());
     }
 
+    /** @throws ExpectationFailedException */
     public function testSetGetProfession(): void
     {
         self::assertNull($this->object->getProfession());
