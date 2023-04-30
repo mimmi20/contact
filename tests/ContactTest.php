@@ -192,18 +192,18 @@ final class ContactTest extends TestCase
         $this->object->setProfession($profession);
 
         $expected = [
-            'contactId' => $id,
-            'salutation' => $salutation,
-            'firstname' => $firstname,
-            'familyname' => $familyname,
-            'street' => $street,
-            'housenumber' => $housenumber,
-            'postalcode' => $postalcode,
-            'city' => $city,
             'birthdate' => $birthdate->format('Y-m-d'),
-            'phonenumber' => $phonenumber,
+            'city' => $city,
+            'contactId' => $id,
             'email' => $email,
+            'familyname' => $familyname,
+            'firstname' => $firstname,
+            'housenumber' => $housenumber,
+            'phonenumber' => $phonenumber,
+            'postalcode' => $postalcode,
             'profession' => $profession,
+            'salutation' => $salutation,
+            'street' => $street,
         ];
 
         self::assertSame($expected, $this->object->toArray());
