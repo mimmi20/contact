@@ -183,23 +183,23 @@ final class Contact implements ContactInterface
     {
         $birthdate = $this->getBirthdate();
 
-        if (null !== $birthdate) {
+        if ($birthdate !== null) {
             $birthdate = $birthdate->format('Y-m-d');
         }
 
         return [
-            'contactId' => $this->getContactId(),
-            'salutation' => $this->getSalutation(),
-            'firstname' => $this->getFirstname(),
-            'familyname' => $this->getFamilyname(),
-            'street' => $this->getStreet(),
-            'housenumber' => $this->getHousenumber(),
-            'postalcode' => $this->getPostalcode(),
-            'city' => $this->getCity(),
             'birthdate' => $birthdate,
-            'phonenumber' => $this->getPhonenumber(),
+            'city' => $this->getCity(),
+            'contactId' => $this->getContactId(),
             'email' => $this->getEmail(),
+            'familyname' => $this->getFamilyname(),
+            'firstname' => $this->getFirstname(),
+            'housenumber' => $this->getHousenumber(),
+            'phonenumber' => $this->getPhonenumber(),
+            'postalcode' => $this->getPostalcode(),
             'profession' => $this->getProfession(),
+            'salutation' => $this->getSalutation(),
+            'street' => $this->getStreet(),
         ];
     }
 }
