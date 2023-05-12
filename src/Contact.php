@@ -175,7 +175,7 @@ final class Contact implements ContactInterface
 
     /**
      * @return array<int>|array<null>|array<string>
-     * @phpstan-return array{contactId: int|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
+     * @phpstan-return array{contactId: int|null, salutation: string|null, firstname: string|null, familyname: string|null, street: string|null, housenumber: string|null, postalcode: string|null, city: string|null, birthdate: string|null, phonenumber: string|null, email: string|null, profession: string|null}
      *
      * @throws void
      */
