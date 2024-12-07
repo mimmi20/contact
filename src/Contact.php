@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace Mimmi20\Contact;
 
 use DateTimeInterface;
+use Override;
 
 final class Contact implements ContactInterface
 {
@@ -31,144 +32,168 @@ final class Contact implements ContactInterface
     private string | null $profession           = null;
 
     /** @throws void */
+    #[Override]
     public function getContactId(): int | null
     {
         return $this->contactId;
     }
 
     /** @throws void */
+    #[Override]
     public function setContactId(int | null $value): void
     {
         $this->contactId = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getSalutation(): string | null
     {
         return $this->salutation;
     }
 
     /** @throws void */
+    #[Override]
     public function setSalutation(string | null $value): void
     {
         $this->salutation = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getFirstname(): string | null
     {
         return $this->firstname;
     }
 
     /** @throws void */
+    #[Override]
     public function setFirstname(string | null $value): void
     {
         $this->firstname = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getFamilyname(): string | null
     {
         return $this->familyname;
     }
 
     /** @throws void */
+    #[Override]
     public function setFamilyname(string | null $value): void
     {
         $this->familyname = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getStreet(): string | null
     {
         return $this->street;
     }
 
     /** @throws void */
+    #[Override]
     public function setStreet(string | null $value): void
     {
         $this->street = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getHousenumber(): string | null
     {
         return $this->housenumber;
     }
 
     /** @throws void */
+    #[Override]
     public function setHousenumber(string | null $value): void
     {
         $this->housenumber = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getPostalcode(): string | null
     {
         return $this->postalcode;
     }
 
     /** @throws void */
+    #[Override]
     public function setPostalcode(string | null $value): void
     {
         $this->postalcode = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getCity(): string | null
     {
         return $this->city;
     }
 
     /** @throws void */
+    #[Override]
     public function setCity(string | null $value): void
     {
         $this->city = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getBirthdate(): DateTimeInterface | null
     {
         return $this->birthdate;
     }
 
     /** @throws void */
+    #[Override]
     public function setBirthdate(DateTimeInterface | null $value): void
     {
         $this->birthdate = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getPhonenumber(): string | null
     {
         return $this->phonenumber;
     }
 
     /** @throws void */
+    #[Override]
     public function setPhonenumber(string | null $value): void
     {
         $this->phonenumber = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getEmail(): string | null
     {
         return $this->email;
     }
 
     /** @throws void */
+    #[Override]
     public function setEmail(string | null $value): void
     {
         $this->email = $value;
     }
 
     /** @throws void */
+    #[Override]
     public function getProfession(): string | null
     {
         return $this->profession;
     }
 
     /** @throws void */
+    #[Override]
     public function setProfession(string | null $value): void
     {
         $this->profession = $value;
@@ -180,6 +205,7 @@ final class Contact implements ContactInterface
      *
      * @throws void
      */
+    #[Override]
     public function toArray(): array
     {
         $birthdate = $this->getBirthdate();
