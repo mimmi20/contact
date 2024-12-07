@@ -15,6 +15,7 @@ namespace Mimmi20\Contact;
 
 use DateTimeImmutable;
 use Exception;
+use Override;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 
@@ -23,6 +24,7 @@ final class ContactTest extends TestCase
     private Contact $object;
 
     /** @throws void */
+    #[Override]
     protected function setUp(): void
     {
         $this->object = new Contact();
